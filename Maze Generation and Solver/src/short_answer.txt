@@ -1,0 +1,53 @@
+Before submitting this file, make sure that there are no more TODO
+values left in the file (besides the one in this introduction of course).
+
+Warmup and Debugging Exercise
+-----------------------------
+Q1. Is the first queue element displayed in debugger pane (element [0]) the element at front of queue or the back?  Is the first stack element displayed on the top of stack or the bottom?
+A1: The first element of the queue is displayed at the front of the queue. The first stack element is at the bottom of the stack.
+
+
+Q2: What must be true about the input to `duplicateNegatives` for it to produce correct output?
+A2: The input must has no negative values in it to produce correct output.
+
+
+Q3: For which type of inputs does `duplicateNegatives ` go into an infinite loop?
+A3: When all the values are negative, duplicate Negatives goes into a infinite loop. The size of the queue keeps on increasing and the for loop never ends.
+
+
+Q4. What is the bug within `duplicateNegatives ` that causes it to get stuck in a loop?
+A4: Q.size() increments everytime the function double enqueues a negative number. So to fix this issue, we should declare a fixed variable of the queue's initial size that cannot be changed before the loop and use that as the restriction of the for loop instead.
+
+
+Q5: What is the state of the variables (as reported in the debugger variable pane) right 
+before the removeMatchPair function crashes? What happens if you try to step over the line 
+where the program crashes?
+A5: The state of the variable is that Jan is no longer in the map, but Jan is still the key for the loop. The debugger does not show the new key and other variables as the line is not stepped over yet. When I tried to step over the line, instead of seeing changes in any variables, the debugger aborted/crashed.
+
+
+Maze
+-------
+Q6. So far in this class, we've passed our data structures by reference. Why do you 
+think `checkSolution` passes path by value instead of by reference?
+A6: I think its because iterating through a stack breaks the stack. Passing by reference would not work very well here because we might need to use the full stack of path later.
+
+Q7. After you have written your tests, describe your testing strategy to determine 
+that your `checkSolution` works as intended.
+A7: My testing solution is to test cases that were not tested in the provided test. One of the them is the out of bounds test. Another thing I did was to putting two errors that occurs on the location to see which error the function passes. Lastly, I decided to test edge cases that were at the end of a loop.
+
+Q8. Describe the malformed maze files you created in order to verify the robustness 
+of your maze reading.
+A8: I tested out the non characters in the grid and unequal rows in separate mazes to check whether error is raised. I also tested whether adding spaces to a line to see if it will affect line length, which it did. Also, I added extra spaces between lines to see if error will be raised, which also did. Lastly, I wanted to try mazes that had unequal columns. Turns out, this is the same case as unequal rows.
+
+
+Search Engine
+-------------
+Q9: What would the sample inverted index for the tiny.txt file look like?
+A9: It would look something like this (not completed).
+{
+"eat" : {"www.bigbadwolf.com"}，
+"i'm" : {"www.bigbadwolf.com"}，
+"blue" : {"www.dr.seuss.net", "www.rainbow.org"}，
+.....
+}
+
