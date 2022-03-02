@@ -2,7 +2,8 @@
 ## Generates a Mazes using an iterative Depth First Search and Solves the Maze using Breadth First Search
 Demo: https://youtu.be/X2Wun39I5Bw
 
-![Capture](https://user-images.githubusercontent.com/67846134/155830540-545ea5a5-821d-43db-a127-1ed8fb25a927.PNG)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/X2Wun39I5Bw/0.jpg)](https://youtu.be/X2Wun39I5Bw)
+
 
 
 Unlike most implmentations, the Depth First Search Algorithm is implemented iteratively using a stack to emulate the call stack.
